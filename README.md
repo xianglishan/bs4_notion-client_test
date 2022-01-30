@@ -2,7 +2,6 @@
 ---
 
 this isbs4 and notion-client sample
-
 ```
 ./
 ├── README.md
@@ -10,4 +9,20 @@ this isbs4 and notion-client sample
 ├── config.py               loads environment
 ├── main.py                 main
 └── test.py                 call notion api
+```
+
+request
+```json
+{
+    "header":{
+        "x-api-key" : "************"
+    }, 
+    "body":{
+        "tabelog_url" : "https://************", 
+        "type" : [
+            {"name" : "***"}, 
+            {"name" : "----"}
+        ]
+    }
+}
 ```

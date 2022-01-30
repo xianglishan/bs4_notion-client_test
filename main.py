@@ -1,7 +1,14 @@
+import json
 import test
 
-T_url = 'tabelog_url'
-type = [
-]
-
-test.notion_api(T_url=T_url, type=type)
+def lambda_handler(event, context):
+    T_url = event['tabelog_url']
+    type = event['type']
+    
+    test.notion_api(T_url, type)
+    
+    res = {
+        "message":"ok!! posted!!!"
+    }
+    
+    return json.dumps(res)
